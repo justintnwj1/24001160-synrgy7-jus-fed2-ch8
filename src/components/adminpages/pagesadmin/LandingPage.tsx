@@ -45,7 +45,6 @@ export default function LandingPage() {
     const [visiblePages, setVisiblePages] = useState<number[]>([]);
     const paginationRange = 5;
     const totalPages = Math.ceil(dataListCars.length / itemsPerPage);
-    const [pictureCar, setPictureCar] = useState<string>('');
 
     const [currentSortOrder, setCurrentSortOrder] = useState<string>('');
     const [sortDirectionOrder, setSortDirectionOrder] = useState<string>('ascending');
@@ -121,8 +120,6 @@ export default function LandingPage() {
     const showDbBc = () => {
         setShowDashboardDashboard(true);
         setIsDashboardBold(true);
-        console.log(pictureCar);
-        
     }
 
     const showListCarsBc = () => {

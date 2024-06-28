@@ -1,4 +1,4 @@
-import React from "react";
+
 import imageFb from "../../assets/icon_facebook.svg";
 import imageIg from "../../assets/icon_instagram.svg";
 import imageMail from "../../assets/icon_mail.svg";

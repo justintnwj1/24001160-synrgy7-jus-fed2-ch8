@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef, useState, useEffect } from "react";
+import { ChangeEvent, useRef, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AddNewCar() {
@@ -10,7 +10,6 @@ export default function AddNewCar() {
     const [name, setName] = useState("");
     const [category, setCategory] = useState("Small");
     const [price, setPrice] = useState("");
-    const [picture, setPicture] = useState("");
 
     const handleCancel = () => {
         navigate("/admindashboard");

@@ -1,4 +1,4 @@
-import React from "react";
+
 import rate from "../../../assets/Rate.svg"
 import photo from "../../../assets/photo.svg"
 

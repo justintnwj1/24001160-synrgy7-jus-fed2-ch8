@@ -1,4 +1,4 @@
-import React from "react";
+
 import carImage from "../../../assets/car.svg"
 
 export default function Home() {

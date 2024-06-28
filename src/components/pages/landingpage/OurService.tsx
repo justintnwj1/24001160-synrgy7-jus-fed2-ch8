@@ -1,4 +1,4 @@
-import React from "react";
+
 import centangImage from "../../../assets/centang.svg"
 import serviceImage from "../../../assets/service.svg"
 
