@@ -14,6 +14,7 @@ const AdminLogin: React.FC = () => {
 
     try {
       const response = await fetch("https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/login", {
+        mode: 'no-cors',
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,6 +34,7 @@ const AdminLogin: React.FC = () => {
 
         // Fetch user role
         const responseUser = await fetch("https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/whoami", {
+          mode: 'no-cors',
           method: "GET",
           headers: {
             "Content-Type": "application/json",

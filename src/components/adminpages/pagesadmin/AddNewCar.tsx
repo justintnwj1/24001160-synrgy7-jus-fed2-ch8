@@ -1,4 +1,4 @@
-import { ChangeEvent, useRef, useState} from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AddNewCar() {
@@ -29,42 +29,44 @@ export default function AddNewCar() {
     };
 
     const handleAddNewCar = async () => {
-        if (name === "" || price === "" || category ===""){
+        if (name === "" || price === "" || category === "") {
             setInsertResult("Semua Kolom Harus Di isi");
             return;
         }
         try {
             const response = await fetch("https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/cars", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            },
-              body: JSON.stringify({ name, price,category }),
+                mode: 'no-cors',
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ name, price, category }),
             });
-      
+
             const result = await response.json();
             setInsertResult(result.message);
 
-            if (result.message === "Mobil berhasil diinput"){
+            if (result.message === "Mobil berhasil diinput") {
                 try {
                     if (!fileRef.current?.files?.[0]) {
                         console.error("No file selected");
                         return;
                     }
-            
+
                     const formData = new FormData();
                     formData.append("image", fileRef.current.files[0]);
-            
+
                     const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/cars/updateim/${name}`, {
+                        mode: 'no-cors',
                         method: "PUT",
                         body: formData,
                     });
-            
+
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }
-            
+
                     const result = await response.json();
                     console.log("Upload successful:", result);
                     setInsertResult(result.message);
@@ -79,7 +81,7 @@ export default function AddNewCar() {
 
         } catch (error) {
             console.log(error);
-          }
+        }
     };
 
     return (

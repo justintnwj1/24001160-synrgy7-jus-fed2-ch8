@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import car from "../../../assets/fi_truck.svg";
 import dashboard from "../../../assets/fi_home.svg";
@@ -131,6 +132,7 @@ export default function LandingPage() {
         const fetchData = async () => {
             try {
                 const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/all-cars?page=${currentPage}&limit=${itemsPerPage}`, {
+                    mode: 'no-cors',
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -155,6 +157,7 @@ export default function LandingPage() {
         const fetchData = async () => {
             try {
                 const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/listorder?page=${currentPageOrder}&limit=${itemsPerPageOrder}`, {
+                    mode: 'no-cors',
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -308,6 +311,7 @@ export default function LandingPage() {
 
         try {
             const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/cars/${carNameDelete}`, {
+                mode: 'no-cors',
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

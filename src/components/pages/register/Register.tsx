@@ -26,6 +26,7 @@ const Register: React.FC = () => {
       }
       else {
         const response = await fetch("https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/register", {
+          mode: 'no-cors',
           method: "POST",
           headers: {
             "Content-Type": "application/json",

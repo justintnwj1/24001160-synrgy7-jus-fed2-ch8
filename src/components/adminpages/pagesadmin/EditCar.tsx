@@ -40,6 +40,7 @@ export default function EditCar() {
 
         try {
             const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/cars/${editCarName}`, {
+                mode: 'no-cors',
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -63,6 +64,7 @@ export default function EditCar() {
                     formData.append("image", fileRef.current.files[0]);
             
                     const response = await fetch(`https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/cars/updateim/${name}`, {
+                        mode: 'no-cors',
                         method: "PUT",
                         body: formData,
                     });
