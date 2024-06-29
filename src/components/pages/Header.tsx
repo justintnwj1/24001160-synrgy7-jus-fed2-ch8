@@ -33,7 +33,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <button className="registerButton">
-                  <a href="https://convincing-mab-justinganteng-781d7896.koyeb.app/register">Register</a>
+                  <a href="https://24001160-synrgy7-jus-fed2-ch8.vercel.app/register">Register</a>
                 </button>
               </li>
             </ul>
