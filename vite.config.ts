@@ -5,13 +5,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     sourcemap: true,
-    outDir: 'build', // Direktori output build
-    assetsDir: '.', // Direktori aset
-    rollupOptions: {
-      // Konfigurasi tambahan Rollup jika diperlukan
-    },
   },
   server: {
-    port: 8000, // Port lokal untuk development server
+    port: 8010, // Port lokal untuk development server
   },
 });
