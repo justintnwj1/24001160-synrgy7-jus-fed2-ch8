@@ -1,8 +1,8 @@
 {
-    "rewrites":  [
-      {"source": "/(.*)", "destination": "/"}
-    ],
-    "routes": [
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "routes": [
     {
       "src": "/api/v1/(.*)",
       "dest": "https://convincing-mab-justinganteng-781d7896.koyeb.app/api/v1/$1",
@@ -11,4 +11,4 @@
       }
     }
   ]
-  }
+}
