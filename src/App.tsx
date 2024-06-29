@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<>
+        <Route path="/getcars" element={<>
           <Layout>
             <Home />
             <OurService />
@@ -29,7 +29,7 @@ function App() {
             <Faq />
           </Layout>
         </>} />
-        <Route path="/getcars" element={<>
+        <Route path="/" element={<>
           <Layout>
             <Home />
             <RentCar />
